@@ -24,7 +24,7 @@ var turnToKill = (originalPosition, positionArray) => {
   }, null);
 };
 
-var HITLER = {
+var Yuno = {
   info: {
     name: 'Yuno',
     style: 6
@@ -57,4 +57,4 @@ var HITLER = {
   }
 };
 
-module.exports = HITLER;
+module.exports = Yuno;
