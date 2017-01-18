@@ -21,6 +21,9 @@ var Stats = React.createClass({
             <td></td>
             <td></td>
             <td>Wins</td>
+            <td>Kills</td>
+            <td>Deaths</td>
+            <td>K/D</td>
           </thead>
           <tbody>
           {_.map(stats, (playerStats, index) => {
@@ -29,6 +32,9 @@ var Stats = React.createClass({
                 <td>{playerStats.isAlive ? '' : "💀"}</td>
                 <td className='player-name'>{playerStats.name}</td>
                 <td className='stats-results'>{playerStats.wins}</td>
+                <td className='stats-results'>{playerStats.kills}</td>
+                <td className='stats-results'>{playerStats.deaths}</td>
+                <td className='stats-results'>{parseFloat(playerStats.kdr).toFixed(2)}</td>
               </tr>
             );
           })}

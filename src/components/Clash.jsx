@@ -184,7 +184,7 @@ var Clash = React.createClass({
         spreeMessage = killer.getName() + ' is Godlike!'
         break
       default:
-        spreeMessage = 'Somebody stop that bastard ' + killer.getName()
+        spreeMessage = 'Somebody stop that monster ' + killer.getName()
         setTimeout(fx.streak.ownage.play(), 300)
     }
     kills.push({date: new Date(), text: spreeMessage})
@@ -232,4 +232,3 @@ var Clash = React.createClass({
 })
 
 module.exports = Clash
-
