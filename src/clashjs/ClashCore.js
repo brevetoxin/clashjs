@@ -6,7 +6,7 @@ var DIRECTIONS = ['north', 'east', 'south', 'west'];
 
 class ClashJS {
   constructor(playerDefinitionArray, currentStats, evtCallback) {
-    this._totalRounds = playerDefinitionArray.length * 2 + 5;
+    this._totalRounds = 20; //playerDefinitionArray.length * 2 + 5;
     this._rounds = 0;
     this._gameStats = currentStats || {};
     this._evtCallback = evtCallback;
@@ -85,7 +85,7 @@ class ClashJS {
       return this._evtCallback('DRAW');
     }
     let clonedStates = _.cloneDeep(this._playerStates, true);
-    if (this._alivePlayerCount <= 3) {
+    if (this._alivePlayerCount <= 2) {
       this._sudeenDeathCount++;
     }
 
