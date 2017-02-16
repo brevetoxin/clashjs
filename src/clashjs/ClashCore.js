@@ -80,12 +80,12 @@ class ClashJS {
   }
 
   nextPly() {
-    if (this._sudeenDeathCount > (250 * this._alivePlayerCount)) {
+    if (this._sudeenDeathCount > (500 * this._alivePlayerCount)) {
       this._handleCoreAction('DRAW');
       return this._evtCallback('DRAW');
     }
     let clonedStates = _.cloneDeep(this._playerStates, true);
-    if (this._alivePlayerCount <= 2) {
+    if (this._alivePlayerCount <= 4) {
       this._sudeenDeathCount++;
     }
 
